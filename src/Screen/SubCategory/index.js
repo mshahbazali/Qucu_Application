@@ -370,7 +370,7 @@ export default function Index() {
                                 <View style={{ justifyContent: 'center', alignItems: 'center', marginBottom: 50 }}>
                                     <TouchableOpacity onPress={() => {
                                         ref.current.open()
-                                    }} style={{ ...styles.shadow, backgroundColor: "#9A9AA8", paddingHorizontal: 120, paddingVertical: 16, borderRadius: 10 }}>
+                                    }} style={{ ...styles.shadow, backgroundColor: "#9A9AA8", paddingHorizontal: 120, paddingVertical: 13, borderRadius: 10 }}>
                                         <Text style={{ color: '#AEAEB9', fontSize: 20, fontWeight: '700' }}>Ver Pedido</Text>
                                     </TouchableOpacity>
                                 </View>
@@ -406,13 +406,30 @@ export default function Index() {
                                     </View>
                                     <View>
                                         <Text style={{ color: "#fff", fontWeight: "500", fontSize: 20, marginTop: 40 }}>Comentarios</Text>
-                                        <View style={{ backgroundColor: "#2D344B", padding: 20, ...styles.shadow, marginVertical: 20, borderRadius: 15, height: 130 }}>
-                                            <TextInput style={{ flex: wrap }} />
+                                        <View style={{ backgroundColor: "#2D344B", padding: 20, ...styles.shadow, marginVertical: 30, borderRadius: 15, height: 190 }}>
+                                            <TextInput placeholder='Añade instrucciones y/o comentarios. El establecimiento hará lo posible por cumplirlo.' multiline={true} style={{ fontSize: 15, color: "#9FA2B1", fontWeight: "500" }} placeholderTextColor="#9FA2B1" />
                                         </View>
+                                    </View>
+                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', }}>
+                                        <View style={{ backgroundColor: "#2D344B", flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', ...styles.shadow, width: 120, paddingHorizontal: 17, paddingVertical: 10, borderRadius: 5 }}>
+                                            <TouchableOpacity>
+                                                <Text style={{ color: "#7E8291", fontWeight: "500", fontSize: 20, marginTop: -10 }}>__</Text>
+                                            </TouchableOpacity>
+                                            <Text style={{ color: "#7E8291", fontWeight: "400", fontSize: 23 }}>1</Text>
+                                            <TouchableOpacity>
+                                                <Text style={{ color: "#7E8291", fontWeight: "500", fontSize: 26 }}>+</Text>
+                                            </TouchableOpacity>
+                                        </View>
+                                        <View style={{ backgroundColor: "#4BA3C3", flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', ...styles.shadow, width: 190, paddingHorizontal: 17, paddingVertical: 10, borderRadius: 5 }}>
+                                            <Text style={{ color: "#fff", fontWeight: "500", fontSize: 20, }}>Agregar</Text>
+                                            <Text style={{ color: "#fff", fontWeight: "500", fontSize: 23 }}>$20.00</Text>
+
+                                        </View>
+                                        <View></View>
                                     </View>
                                 </View>
                             </RBSheet>
-                        </View>
+                        </View >
             }
         </View >
     )
